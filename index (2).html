@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Quán Ăn Ngon</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background-image: url("https://i.pinimg.com/736x/9f/38/9b/9f389b2c5c9d2f5b6d5c0b8e9f6a3d9f.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* HEADER */
+header{
+    background:rgba(255,152,0,0.9);
+    padding:15px 40px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo{
+    width:60px;
+    height:60px;
+    background:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.logo img{
+    width:45px;
+}
+
+header h1{
+    color:white;
+    font-size:26px;
+}
+
+/* BANNER */
+.banner{
+    height:160px;
+    background:url("https://i.pinimg.com/736x/44/5e/6c/445e6c1f8a1e8d1c8f1f1f6a0f5e1b7b.jpg") center/cover;
+}
+
+/* MENU */
+.menu{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:40px;
+}
+
+.item{
+    background:rgba(255,255,255,0.9);
+    width:250px;
+    border-radius:15px;
+    text-align:center;
+    padding:15px;
+    box-shadow:0 5px 12px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.item:hover{
+    transform:translateY(-8px);
+}
+
+.item img{
+    width:100%;
+    border-radius:12px;
+}
+
+.item h3{
+    color:#ff5722;
+    margin:10px 0;
+}
+
+.price{
+    color:#d84315;
+    font-weight:bold;
+}
+
+button{
+    margin-top:10px;
+    padding:8px 14px;
+    border:none;
+    background:#ffcc80;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ffb74d;
+}
+</style>
+</head>
+
+<body>
+
+<!-- BẢN ĐỒ -->
+<div style="padding:40px;">
+    <iframe 
+        src="https://www.google.com/maps?q=Hà+Nội&output=embed"
+        width="100%" 
+        height="300" 
+        style="border-radius:15px;border:0;">
+    </iframe>
+</div>
+
+<header>
+    <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png">
+    </div>
+    <h1>Quán Ăn Ngon</h1>
+</header>
+
+<div class="banner"></div>
+
+<div class="menu">
+    <div class="item">
+        <img src="https://www.robins.vn/wp-content/uploads/2025/10/kfc3-750x468.jpg.jpg">
+        <h3>Gà Rán</h3>
+        <div class="price">50.000đ</div>
+        <button>Đặt món</button>
+    </div>
+
+    <div class="item">
+        <img src="https://media.istockphoto.com/id/2061716709/vi/anh/burger.jpg">
+        <h3>Burger Bò</h3>
+        <div class="price">45.000đ</div>
+        <button>Đặt món</button>
+    </div>
+
+    <div class="item">
+        <img src="https://thanhbachnguyenlieuphache.com/wp-content/uploads/2025/09/hinh-anh-tra-sua-duong-den.jpg">
+        <h3>Trà Sữa</h3>
+        <div class="price">30.000đ</div>
+        <button>Đặt món</button>
+    </div>
+</div>
+
+<!-- VIDEO ĐỒ ĂN -->
+<div style="padding:40px; text-align:center;">
+    <h2 style="color:white; margin-bottom:15px;">Video Món Ăn Hấp Dẫn</h2>
+    <iframe 
+        width="800" 
+        height="450"
+        src="https://www.youtube.com/shorts/bwImC3rY6wQ"
+        frameborder="0"
+        allowfullscreen
+        style="border-radius:15px; box-shadow:0 5px 12px rgba(0,0,0,0.4);">
+    </iframe>
+</div>
+
+</body>
+</html>
