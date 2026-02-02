@@ -2,161 +2,196 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Quán Ăn Ngon</title>
+<title>Quán Ăn Trọng Phúc</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{background:#111;color:#fff}
 
-body{
-    background-image: url("https://i.pinimg.com/736x/9f/38/9b/9f389b2c5c9d2f5b6d5c0b8e9f6a3d9f.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-/* HEADER */
-header{
-    background:rgba(255,152,0,0.9);
-    padding:15px 40px;
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.logo{
-    width:60px;
-    height:60px;
-    background:white;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.logo img{
-    width:45px;
-}
-
-header h1{
-    color:white;
-    font-size:26px;
-}
-
-/* BANNER */
-.banner{
-    height:160px;
-    background:url("https://i.pinimg.com/736x/44/5e/6c/445e6c1f8a1e8d1c8f1f1f6a0f5e1b7b.jpg") center/cover;
-}
-
-/* MENU */
-.menu{
+/* MENU TOP */
+nav{
+    background:#ff9800;
     display:flex;
     justify-content:center;
     gap:30px;
-    padding:40px;
-}
-
-.item{
-    background:rgba(255,255,255,0.9);
-    width:250px;
-    border-radius:15px;
-    text-align:center;
     padding:15px;
-    box-shadow:0 5px 12px rgba(0,0,0,0.2);
-    transition:0.3s;
+    position:sticky;
+    top:0;
 }
-
-.item:hover{
-    transform:translateY(-8px);
-}
-
-.item img{
-    width:100%;
-    border-radius:12px;
-}
-
-.item h3{
-    color:#ff5722;
-    margin:10px 0;
-}
-
-.price{
-    color:#d84315;
+nav a{
+    color:#000;
+    text-decoration:none;
     font-weight:bold;
 }
 
+/* SECTION */
+section{padding:50px 15px;max-width:1100px;margin:auto}
+
+/* MÓN ĂN */
+.menu{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+.card{background:#1c1c1c;border-radius:10px;overflow:hidden}
+.card img{width:100%;height:160px;object-fit:cover}
+.card .content{padding:15px}
+.price{color:#4caf50;margin:8px 0}
 button{
-    margin-top:10px;
-    padding:8px 14px;
+    width:100%;
+    padding:10px;
+    background:#ff9800;
     border:none;
-    background:#ffcc80;
-    border-radius:8px;
+    font-weight:bold;
     cursor:pointer;
+    margin-top:5px;
 }
 
-button:hover{
-    background:#ffb74d;
+/* ZALO */
+.zalo{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#00bfa5;
+    color:#fff;
+    padding:12px 18px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:bold;
 }
+
+/* MAP */
+.map iframe{width:100%;height:300px;border:0;border-radius:10px}
+
+/* FOOTER */
+footer{text-align:center;padding:15px;background:#000;color:#aaa}
 </style>
 </head>
 
 <body>
 
-<!-- BẢN ĐỒ -->
-<div style="padding:40px;">
-    <iframe 
-        src="https://www.google.com/maps?q=Hà+Nội&output=embed"
-        width="100%" 
-        height="300" 
-        style="border-radius:15px;border:0;">
-    </iframe>
-</div>
+<!-- MENU -->
+<nav>
+    <a href="#home">Trang chủ</a>
+    <a href="#food">Món ăn</a>
+    <a href="#contact">Liên hệ</a>
+</nav>
 
-<header>
-    <div class="logo">
-        <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png">
+<a class="zalo" href="https://zalo.me/0853111198" target="_blank">💬 Zalo</a>
+
+<!-- TRANG CHỦ -->
+<section id="home">
+    <h1>🍔 QUÁN ĂN TRỌNG PHÚC</h1>
+    <p>Ngon – Rẻ – Giao nhanh tại Mỹ Tho</p>
+    <p>Hotline: <b>0853 111 198</b></p>
+</section>
+
+<!-- MÓN ĂN -->
+<section id="food">
+    <h2>🍽️ Món ăn</h2>
+
+    <div class="menu">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+            <div class="content">
+                <h3>Burger Bò</h3>
+                <p class="price">45.000đ</p>
+                <button onclick="addToCart('Burger Bò',45000)">Thêm</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1601924582975-7e670e0b4c9b">
+            <div class="content">
+                <h3>Pizza Hải Sản</h3>
+                <p class="price">120.000đ</p>
+                <button onclick="addToCart('Pizza Hải Sản',120000)">Thêm</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb36">
+            <div class="content">
+                <h3>Gà Rán</h3>
+                <p class="price">35.000đ</p>
+                <button onclick="addToCart('Gà Rán',35000)">Thêm</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c">
+            <div class="content">
+                <h3>Mì Ý</h3>
+                <p class="price">60.000đ</p>
+                <button onclick="addToCart('Mì Ý',60000)">Thêm</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
+            <div class="content">
+                <h3>Cơm Gà</h3>
+                <p class="price">40.000đ</p>
+                <button onclick="addToCart('Cơm Gà',40000)">Thêm</button>
+            </div>
+        </div>
+
     </div>
-    <h1>Quán Ăn Ngon</h1>
-</header>
 
-<div class="banner"></div>
+    <h3 style="margin-top:25px">🛒 Giỏ hàng</h3>
+    <ul id="cart"></ul>
+    <p><b>Tổng tiền:</b> <span id="total">0</span> đ</p>
 
-<div class="menu">
-    <div class="item">
-        <img src="https://www.robins.vn/wp-content/uploads/2025/10/kfc3-750x468.jpg.jpg">
-        <h3>Gà Rán</h3>
-        <div class="price">50.000đ</div>
-        <button>Đặt món</button>
+    <button style="background:#00bfa5;margin-top:15px" onclick="datHangZalo()">
+        📲 Đặt hàng qua Zalo
+    </button>
+</section>
+
+<!-- LIÊN HỆ -->
+<section id="contact">
+    <h2>📍 Liên hệ</h2>
+    <p><b>Chủ quán:</b> Trọng Phúc</p>
+    <p><b>Địa chỉ:</b> 83A Nguyễn Trung Trực, P2, Mỹ Tho</p>
+
+    <div class="map">
+        <iframe src="https://www.google.com/maps?q=83A%20Nguyễn%20Trung%20Trực%2C%20Phường%202%2C%20Mỹ%20Tho%2C%20Tiền%20Giang%20840000%2C%20Vietnam&output=embed"></iframe>
     </div>
+</section>
 
-    <div class="item">
-        <img src="data:image/jpeg;base64,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jUzUy1jy0tMRNiDbloZ0uvT6PUkpNrRltJaHcL0i0IAgCAIAgCAIAgCAIAgCAIAgKLivB3F7qtINzObBaTEmIkGNfX4ry8XgpScpU7aqzW3jcqlTu7o4zD8Ce+p3ZDg8AkgiDA5bLwaeDq5nBfNyKI0+1Y6HG8JaylSdkh0nNvJNxPWBot9XCKlQh2bPZ/7702PYwDy3j4mmcBTkkgmWwB8NOv5rCqUVJvmaadBQqOpHds13U/CW2gnX9/uy7K0lYunQp1GnNGpUwmU5tffZcUbF8MqVkrGFapAsu2sTSuaL6+uqkoIma7qrv+dv3ZdUCWhAapuL2/Z0Usp3Q8GIK5kQJWYkgLipI49SdmNPNTyFbSI3Yp3NMh3QDEE7ruWwsYurGP3+K7lFjDMIhTitSEkZ0uGPxFOqGNzZKZeRzggQOsSfYq1UpT1jw1PPxzSp25s97KcPNTE0WeQBwNrWZ4jfXRsKvDwcq8V4+R4uW8j7OAvpC49QBAEAQBAEAQBAEAQBAEAQBAEAQENTDNc5riPE2YPQiCPRVunFyUuK92FuJBxejnpkcoPw/RUY2m50nbhqXYeeWaZzlamD6r5+S5HqRk0RGltb4LmQ7mIcRREc/dScDsZldXpTsdOX3KLiXKRo16PpbquE1I1DQMxCmiTkkYmiOvx/NSsRzELcP0MaruUln0J24fn++nshHNyI3sNwpJHLkRBUrI7cNPTZcsHLQ2KV9QjiQcrAsabBFCwczu/k+wQbSfU3e+J/utEf5i74dF62Bj2XLn+DysbO80uX5OrhbjEeoAgCAIAgCAIAgCAIAgCAIAgCAIAgPCgI3scdHR7KLTBT4jgLiSW1Q2+mW33rBPo+Ld07GuOKaVmrmq/s/W2qsPTKR+KqfR0v+vQsWMj/AMkNXgGI27s9c5H+lRfR0+ZJYuHI139ncUdqf/k/2p/H1OaJLGU+TIHdmMVyZ9f9Fz+Oqc0dWNp8mRP7LYo/RZ9f9EXR9Tmjvx1Pkw7stij9Fn1/0XXgKnCwWNp9543sniv4af1/0XfgKnNB42HeZf8ASeJ/hp/X/RcfR9Tmh8dDvMf+j8Te1Mfz/wC1S/j58znx0OTPB2KxJ3pD+Y/kpLAT5nHjo8jM9hsQf7akPZxUvgHzI/Grket7A1t8Sz2Y781L4HvOPHdxPT+T68uxTvQUwPxViwcVxK3jJPgX+D4I6mAPnFUgaCYA9ALBaYwyqxllK7uWdOhH0nH1KmRJQEB6gCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgP/2Q==">
-        <h3>Burger Bò</h3>
-        <div class="price">45.000đ</div>
-        <button>Đặt món</button>
-    </div>
+<footer>
+    © 2026 | Quán Ăn Trọng Phúc
+</footer>
 
-    <div class="item">
-        <img src="data:image/jpeg;base64,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">
-        <h3>Trà Sữa</h3>
-        <div class="price">30.000đ</div>
-        <button>Đặt món</button>
-    </div>
-</div>
+<script>
+let total = 0;
+let cartText = "";
 
-<!-- VIDEO ĐỒ ĂN -->
-<iframe 
-    width="100%" 
-    height="350"
-    src="https://www.youtube.com/embed/WcPHM9zR1Ww"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-</iframe>
+function addToCart(name, price){
+    const li = document.createElement("li");
+    li.innerText = name + " - " + price + "đ";
+    document.getElementById("cart").appendChild(li);
+
+    total += price;
+    cartText += "- " + name + " (" + price + "đ)%0A";
+    document.getElementById("total").innerText = total;
+}
+
+function datHangZalo(){
+    if(total === 0){
+        alert("❌ Giỏ hàng đang trống!");
+        return;
+    }
+    const msg =
+        "Xin chào quán Trọng Phúc,%0A"
+        + "Tôi muốn đặt:%0A"
+        + cartText
+        + "Tổng tiền: " + total + "đ";
+
+    window.open("https://zalo.me/0853111198?text=" + msg);
+}
+</script>
+
+</body>
+</html>
