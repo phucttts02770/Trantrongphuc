@@ -2,32 +2,81 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Sản phẩm | Quán Ăn Trọng Phúc</title>
-<link rel="stylesheet" href="style.css">
+<title>Sản phẩm – Quán Trọng Phúc</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{margin:0;font-family:Arial;background:#fff;color:#000}
+nav{
+    background:#ff9800;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:15px;
+}
+nav a{color:#fff;text-decoration:none;font-weight:bold}
+
+section{max-width:1100px;margin:auto;padding:40px 15px}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+.card{
+    background:#000;
+    color:#fff;
+    border-radius:10px;
+    overflow:hidden;
+}
+.card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+}
+.card .content{padding:15px}
+.price{color:#4caf50;margin:8px 0}
+button{
+    width:100%;
+    padding:10px;
+    background:#ff9800;
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
+}
+</style>
 </head>
 
 <body>
 
 <nav>
     <a href="index.html">Trang chủ</a>
+    <a href="menu.html">Món ăn</a>
     <a href="product.html">Sản phẩm</a>
     <a href="lienhe.html">Liên hệ</a>
 </nav>
 
-<section class="intro">
-    <h1>Sản phẩm của chúng tôi</h1>
-    <p>
-        Quán Ăn Trọng Phúc chuyên phục vụ các món ăn ngon, giá cả hợp lý,
-        phù hợp cho học sinh – sinh viên và gia đình.
-    </p>
-</section>
+<section>
+    <h1>🛍️ Sản phẩm nổi bật</h1>
 
-<section class="product-list">
-    <div class="product">
-        <img src="https://i.pinimg.com/736x/9d/9a/9f/9d9a9f9a9f9a9f9a.jpg">
-        <h3>Burger Bò</h3>
-        <p class="price">45.000đ</p>
-        <p>Burger bò thơm ngon, nhiều thịt, ăn là ghiền.</p>
+    <div class="products">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+            <div class="content">
+                <h3>Burger Bò Đặc Biệt</h3>
+                <p class="price">45.000đ</p>
+                <button>Đặt ngay</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38">
+            <div class="content">
+                <h3>Pizza Phô Mai</h3>
+                <p class="price">89.000đ</p>
+                <button>Đặt ngay</button>
+            </div>
+        </div>
     </div>
 </section>
 
