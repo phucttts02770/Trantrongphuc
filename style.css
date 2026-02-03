@@ -55,3 +55,39 @@ nav a:hover{
 
 /* FOOTER */
 footer{
+    background:#000;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+}
+
+/* ===== LÀM TRANG ĐẸP HƠN ===== */
+body{
+    background:#f5f5f5;
+}
+
+/* MENU */
+nav{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+}
+
+/* KHUYẾN MÃI ITEM */
+.container p{
+    background:#fff3e0;
+    padding:15px;
+    border-radius:10px;
+    margin:15px 0;
+    font-size:20px;
+}
+/* FOOTER */
+footer{
+    background:#000;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+}
+
