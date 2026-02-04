@@ -248,6 +248,17 @@ footer{
     overflow:hidden;
     box-shadow:0 6px 18px rgba(0,0,0,0.1);
 }
+.navbar{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.logo img{
+    height:45px;
+}
+
+
 
 
 
