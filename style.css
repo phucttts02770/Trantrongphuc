@@ -257,6 +257,21 @@ footer{
 .logo img{
     height:45px;
 }
+.btn{
+    display:inline-block;
+    background:#d90429;
+    color:#fff;
+    padding:12px 20px;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    margin-top:10px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#a1031f;
+}
 
 
 
